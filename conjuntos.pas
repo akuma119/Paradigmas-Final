@@ -11,7 +11,7 @@ type
     claseconjunto = object
 
                     elemento : array [1..N] of boolean;
-                    
+
                     procedure inicializar;
                     function pertenece(i : integer) : boolean;
                     procedure union(var c : claseconjunto; a,b : claseconjunto);
@@ -40,8 +40,8 @@ implementation
 
     begin
 
-        if i := N then
-            elemento[i] := true;
+        if i <= N then
+            elemento[i] := true
 
     end;
 
@@ -67,7 +67,7 @@ implementation
         for i := 1 to N do
             begin
 
-                    if a.pertence(i) or b.pertenece(i) then
+                    if a.pertenece(i) or b.pertenece(i) then
                     c.agregar(i);
 
             end;
@@ -114,4 +114,4 @@ implementation
 
     end;
 
-
+end.
